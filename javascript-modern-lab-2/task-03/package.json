@@ -1,0 +1,10 @@
+{
+  "name": "task-03-shopping-cart",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Task 03 - modul JavaScript pentru gestionarea unui cos de cumparaturi",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  }
+}

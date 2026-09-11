@@ -1,0 +1,10 @@
+{
+  "name": "task-04-employees",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Task 04 - gestionarea angajatilor unei companii",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  }
+}

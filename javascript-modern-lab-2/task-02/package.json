@@ -1,0 +1,10 @@
+{
+  "name": "task-02-student-catalog",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Task 02 - catalog elevi, module separate (utils.js, students.js, main.js)",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  }
+}

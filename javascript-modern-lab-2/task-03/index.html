@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 03 - Coș de Cumpărături</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen p-8 font-sans">
+  <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+    <div class="border-b pb-4 mb-6">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Task 03</span>
+      <h1 class="text-2xl font-bold mt-2 text-gray-900">Coș de Cumpărături</h1>
+      <p class="text-sm text-gray-500 mt-1">Gestiune produse și calcul total (Modul `cart.js`).</p>
+    </div>
+
+    <div id="cart-container" class="space-y-4">
+      <!-- Tabel Coș -->
+    </div>
+  </div>
+
+  <script type="module">
+    import { cart, getTotalPrice } from './cart.js';
+
+    const container = document.getElementById('cart-container');
+
+    if (cart && cart.length > 0) {
+      let html = `
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-gray-200 text-gray-500 uppercase text-xs">
+                <th class="py-3 px-2">Produs</th>
+                <th class="py-3 px-2">Preț</th>
+                <th class="py-3 px-2">Cantitate</th>
+                <th class="py-3 px-2 text-right">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+      `;
+
+      cart.forEach(item => {
+        html += `
+          <tr>
+            <td class="py-3 px-2 font-medium text-gray-800">${item.name || item.title}</td>
+            <td class="py-3 px-2">${item.price} LEI</td>
+            <td class="py-3 px-2">${item.quantity}</td>
+            <td class="py-3 px-2 text-right font-semibold">${(item.price * item.quantity).toFixed(2)} LEI</td>
+          </tr>
+        `;
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>
+        <div class="flex justify-between items-center pt-4 border-t border-gray-200 mt-4">
+          <span class="text-base font-bold text-gray-700">Total General:</span>
+          <span class="text-xl font-extrabold text-emerald-600">${getTotalPrice().toFixed(2)} LEI</span>
+        </div>
+      `;
+      container.innerHTML = html;
+    } else {
+      container.innerHTML = `<p class="text-gray-500 italic">Coșul este gol sau neinițializat.</p>`;
+    }
+  </script>
+</body>
+</html>
