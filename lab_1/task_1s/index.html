@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turnul de Cafea — prăjitorie artizanală</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+  <header class="antet">
+    <div class="antet__interior">
+      <a href="#" class="sigla">Turnul<span>de Cafea</span></a>
+
+      <nav class="navigare" aria-label="Navigare principală">
+        <ol>
+          <li><a href="#produse">Produse</a></li>
+          <li><a href="#comparatie">Sortimente</a></li>
+          <li><a href="#recenzii">Recenzii</a></li>
+          <li><a href="#abonare">Abonare</a></li>
+        </ol>
+      </nav>
+
+      <a href="#cos" class="antet__cos">Coș · 0 produse</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eticheta">Prăjită săptămânal, în loturi mici</p>
+        <h1>Cafea de origine, prăjită cu doar trei zile înainte să ajungă la tine.</h1>
+        <p class="hero__descriere">
+          Lucrăm direct cu ferme mici din Etiopia, Columbia și Guatemala și
+          prăjim fiecare comandă la cerere — nu ținem stoc vechi pe raft.
+        </p>
+        <a href="#produse" class="buton buton--plin">Vezi boabele din această săptămână</a>
+      </div>
+      <img
+        src="https://picsum.photos/seed/prajitorie/640/560"
+        alt="Boabe de cafea proaspăt prăjite, într-un vas metalic"
+        class="hero__imagine"
+      >
+    </section>
+
+    <section class="categorii">
+      <h2 class="titlu-sectiune">Ce cauți astăzi</h2>
+      <ul class="lista-categorii">
+        <li>
+          <h3>Boabe întregi</h3>
+          <p>Pentru cei care macină acasă, chiar înainte de preparare.</p>
+        </li>
+        <li>
+          <h3>Cafea măcinată</h3>
+          <p>Măcinare potrivită pentru filtru, ibric sau french press.</p>
+        </li>
+        <li>
+          <h3>Accesorii</h3>
+          <p>Râșnițe, filtre din hârtie și căni din ceramică lucrată manual.</p>
+        </li>
+        <li>
+          <h3>Abonamente</h3>
+          <p>Un pachet nou, ales de noi, livrat la 2 sau 4 săptămâni.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="produse" class="produse">
+      <h2 class="titlu-sectiune">Loturile săptămânii</h2>
+      <div class="grid-produse">
+
+        <article class="card-produs">
+          <img src="https://picsum.photos/seed/etiopia/360/300" alt="Pungă de cafea Etiopia Yirgacheffe">
+          <div class="card-produs__info">
+            <h3>Etiopia — Yirgacheffe</h3>
+            <p>Note florale, de bergamotă și fructe de pădure.</p>
+            <div class="card-produs__jos">
+              <span class="pret">42 lei / 250g</span>
+              <a href="#" class="buton buton--mic">Adaugă în coș</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-produs">
+          <img src="https://picsum.photos/seed/columbia/360/300" alt="Pungă de cafea Columbia Huila">
+          <div class="card-produs__info">
+            <h3>Columbia — Huila</h3>
+            <p>Corp echilibrat, caramel și nucă prăjită.</p>
+            <div class="card-produs__jos">
+              <span class="pret">38 lei / 250g</span>
+              <a href="#" class="buton buton--mic">Adaugă în coș</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-produs">
+          <img src="https://picsum.photos/seed/guatemala/360/300" alt="Pungă de cafea Guatemala Antigua">
+          <div class="card-produs__info">
+            <h3>Guatemala — Antigua</h3>
+            <p>Cacao, un strop de citrice și finisaj lung.</p>
+            <div class="card-produs__jos">
+              <span class="pret">40 lei / 250g</span>
+              <a href="#" class="buton buton--mic">Adaugă în coș</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="comparatie" class="comparatie">
+      <h2 class="titlu-sectiune">Compară sortimentele</h2>
+      <p>Alege în funcție de intensitate și metoda ta de preparare preferată.</p>
+      <table class="tabel-comparatie">
+        <thead>
+          <tr>
+            <th scope="col">Sortiment</th>
+            <th scope="col">Intensitate</th>
+            <th scope="col">Aciditate</th>
+            <th scope="col">Recomandat pentru</th>
+            <th scope="col">Preț</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Etiopia — Yirgacheffe</td>
+            <td>Ușoară</td>
+            <td>Ridicată</td>
+            <td>Filtru, V60</td>
+            <td>42 lei</td>
+          </tr>
+          <tr>
+            <td>Columbia — Huila</td>
+            <td>Medie</td>
+            <td>Medie</td>
+            <td>French press, ibric</td>
+            <td>38 lei</td>
+          </tr>
+          <tr>
+            <td>Guatemala — Antigua</td>
+            <td>Medie-intensă</td>
+            <td>Scăzută</td>
+            <td>Espressor</td>
+            <td>40 lei</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="recenzii" class="recenzii">
+      <h2 class="titlu-sectiune">Ce spun clienții</h2>
+      <div class="grid-recenzii">
+        <blockquote>
+          <p>„Prima dată când simt diferența dintre un lot proaspăt și cafeaua de la raft.”</p>
+          <cite>— Mihai R., client din 2024</cite>
+        </blockquote>
+        <blockquote>
+          <p>„Abonamentul m-a scos din obiceiul de a cumpăra mereu același sortiment.”</p>
+          <cite>— Diana T., abonată lunar</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="abonare" class="abonare">
+      <div class="abonare__text">
+        <h2 class="titlu-sectiune">Primești vești despre loturile noi</h2>
+        <p>
+          Trimitem un e-mail pe săptămână, doar cu originile nou sosite —
+          fără reclame, fără spam.
+        </p>
+      </div>
+
+      <form class="formular-abonare" action="#" method="post">
+        <div class="camp">
+          <label for="nume">Nume</label>
+          <input type="text" id="nume" name="nume" placeholder="Numele tău" required>
+        </div>
+
+        <div class="camp">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="adresa@exemplu.com" required>
+        </div>
+
+        <div class="camp">
+          <label for="preferinta">Preparare preferată</label>
+          <select id="preferinta" name="preferinta">
+            <option value="filtru">Filtru / V60</option>
+            <option value="espresso">Espressor</option>
+            <option value="ibric">Ibric / French press</option>
+          </select>
+        </div>
+
+        <div class="camp camp--checkbox">
+          <input type="checkbox" id="acord" name="acord" required>
+          <label for="acord">Sunt de acord să primesc e-mailuri cu loturi noi</label>
+        </div>
+
+        <button type="submit">Abonează-mă</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__interior">
+      <p>&copy; 2026 Turnul de Cafea. Prăjitorie artizanală — proiect practic de site e-commerce.</p>
+      <nav aria-label="Legături footer">
+        <a href="#produse">Produse</a>
+        <a href="#comparatie">Sortimente</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">Cod sursă pe GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
