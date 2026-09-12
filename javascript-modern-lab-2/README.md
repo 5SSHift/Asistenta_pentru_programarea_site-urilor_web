@@ -1,69 +1,75 @@
-# javascript-modern-lab-2
+Structura Proiectului
 
-Laborator JavaScript modern: array methods (`filter`, `map`, `reduce`), module ES6,
-destructuring, spread, template literals si `try/catch`.
-
-## Structura repository-ului
-
-```
+```text
 javascript-modern-lab-2/
-│
-├── task-01/   -> prelucrarea unui array de note
-├── task-02/   -> catalog elevi (module: utils.js, students.js, main.js)
-├── task-03/   -> cos de cumparaturi (modul cart.js)
-├── task-04/   -> gestionarea angajatilor unei companii
-└── README.md
+├── README.md
+├── task-01/
+│   ├── grades.js
+│   └── package.json
+├── task-02/
+│   ├── main.js
+│   ├── students.js
+│   ├── utils.js
+│   └── package.json
+├── task-03/
+│   ├── index.html
+│   ├── main.js
+│   ├── cart.js
+│   └── package.json
+└── task-04/
+    ├── index.html
+    ├── main.js
+    ├── employees.js
+    └── package.json
 ```
 
-Fiecare task este un mini-proiect Node.js independent (module ES6, `"type": "module"`
-in `package.json`). Rulare, din interiorul fiecarui folder:
 
-```bash
-node main.js
-# sau, pentru task-01:
-node grades.js
-```
 
-## Pasi pentru a initializa repository-ul si a face commit-urile cerute
+##  Descrierea Task-urilor
 
-```bash
-# 1. Creati repository-ul nou pe GitHub, apoi clonati-l local
-git clone https://github.com/<user>/javascript-modern-lab-2.git
-cd javascript-modern-lab-2
+###  Task 01: Calculul și Gestionarea Notelelor (Grades Management)
+- **Fișiere:** `task-01/grades.js`, `task-01/package.json`
+- **Descriere:** Lucrul cu tabouri de note/numere, calcularea mediei, filtrarea notelor de trecere/promovare și utilizarea metodelor moderne de legătură pe tablouri (`map`, `filter`, `reduce`).
 
-# 2. Copiati folderele task-01, task-02, task-03, task-04 si README.md
-#    in radacina repository-ului clonat
+###  Task 02: Gestionarea Studenților și Utilitare (Student Management System)
+- **Fișiere:** `task-02/students.js`, `task-02/utils.js`, `task-02/main.js`, `task-02/package.json`
+- **Descriere:** Structurarea datelor complexe despre studenți. Utilizarea modulelor ES6 (`import`/`export`) pentru separarea logicii de date și a funcțiilor utilitare (ex: sortare, căutare, procesare date).
 
-# 3. Commit separat pentru fiecare sarcina (minim 1 commit/task, ideal cate 2+
-#    pentru a ajunge la cele 10 commit-uri cerute: implementare + fix/imbunatatire)
+###  Task 03: Coș de Cumpărături (Shopping Cart Interactive UI)
+- **Fișiere:** `task-03/index.html`, `task-03/main.js`, `task-03/cart.js`, `task-03/package.json`
+- **Descriere:** Implementarea logicii pentru un coș de cumpărături interactiv. Adăugarea, ștergerea și actualizarea produselor din coș, precum și calculul automat al totalului prin conectarea logicii JavaScript cu interfața HTML (DOM).
 
-git add task-01/
-git commit -m "Task 01 - grades processing (filter, map, reduce)"
-git push
+###  Task 04: Sistem de Management al Angajaților (Employee Management UI)
+- **Fișiere:** `task-04/index.html`, `task-04/main.js`, `task-04/employees.js`, `task-04/package.json`
+- **Descriere:** Aplicație web completă pentru vizualizarea și gestionarea unei liste de angajați. Renders dinamice pe bază de DOM, filtrare după departament sau funcție, căutare și manipulare stări.
 
-git add task-02/
-git commit -m "Task 02 - student catalog"
-git push
+---
 
-git add task-03/
-git commit -m "Task 03 - shopping cart module"
-git push
+##  Instrucțiuni de Rulare și Utilizare
 
-git add task-04/
-git commit -m "Task 04 - employee management"
-git push
+### Cerințe preliminare
+- Node.js (versiune recentă recomandată, v14+)
+- Un browser web modern (Chrome, Firefox, Edge, Safari)
 
-# 4. Daca remediati ulterior o eroare intr-un task, faceti un commit separat:
-git add task-02/
-git commit -m "Fix error handling in task 02"
-git push
-```
+### Instalare și Rulare
 
-### Sugestie pentru a ajunge la 10 commit-uri
-Impartiti fiecare task in cate 2-3 commit-uri incrementale, de exemplu pentru task-02:
+1. **Clonarea repozitoriului:**
+   ```bash
+   git clone <repository-url>
+   cd javascript-modern-lab-2
+   ```
 
-1. `Task 02 - setup utils.js (calculateSum, calculateAverage)`
-2. `Task 02 - add students.js module`
-3. `Task 02 - connect main.js and add try/catch handling`
+2. **Rularea Task-urilor bazate pe Node.js (Task 01 & Task 02):**
+   Navigați în directorul task-ului dorit și executați script-ul principal:
+   ```bash
+   cd task-01
+   node grades.js
 
-Procedati similar si pentru celelalte task-uri, pana completati cele 10 commit-uri.
+   # sau pentru Task 02
+   cd ../task-02
+   node main.js
+   ```
+
+3. **Rularea Task-urilor bazate pe Interfață Web / Browser (Task 03 & Task 04):**
+   - Deschideți fișierul `index.html` din `task-03` sau `task-04` direct în browser, sau
+   - Utilizați extensia **Live Server** din VS Code pentru o experiență de dezvoltare mai bună (sau rulează un server local `npx serve .`).
