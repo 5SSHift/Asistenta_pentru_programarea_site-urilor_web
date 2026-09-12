@@ -43,8 +43,6 @@ javascript-modern-lab-2/
 - **Fișiere:** `task-04/index.html`, `task-04/main.js`, `task-04/employees.js`, `task-04/package.json`
 - **Descriere:** Aplicație web completă pentru vizualizarea și gestionarea unei liste de angajați. Renders dinamice pe bază de DOM, filtrare după departament sau funcție, căutare și manipulare stări.
 
----
-
 ##  Instrucțiuni de Rulare și Utilizare
 
 ### Cerințe preliminare
@@ -72,4 +70,4 @@ javascript-modern-lab-2/
 
 3. **Rularea Task-urilor bazate pe Interfață Web / Browser (Task 03 & Task 04):**
    - Deschideți fișierul `index.html` din `task-03` sau `task-04` direct în browser, sau
-   - Utilizați extensia **Live Server** din VS Code pentru o experiență de dezvoltare mai bună (sau rulează un server local `npx serve .`).
+   - Utilizați extensia **Live Server** din VS Code pentru o experiență de dezvoltare mai bună.
