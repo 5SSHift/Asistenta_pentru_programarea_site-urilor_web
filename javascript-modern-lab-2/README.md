@@ -72,4 +72,4 @@ javascript-modern-lab-2/
 
 3. **Rularea Task-urilor bazate pe Interfață Web / Browser (Task 03 & Task 04):**
    - Deschideți fișierul `index.html` din `task-03` sau `task-04` direct în browser, sau
-   - Utilizați extensia **Live Server** din VS Code pentru o experiență de dezvoltare mai bună (sau rulează un server local `npx serve .`).
+   - Utilizați extensia **Live Server** din VS Code pentru o experiență de dezvoltare mai bună.

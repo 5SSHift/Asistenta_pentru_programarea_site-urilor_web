@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 04 - Gestionare Angajați</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen p-8 font-sans">
+  <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+    <div class="border-b pb-4 mb-6">
+      <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Task 04</span>
+      <h1 class="text-2xl font-bold mt-2 text-gray-900">Gestionare Angajați</h1>
+      <p class="text-sm text-gray-500 mt-1">Manipulare avansată de date, filtrare pe departamente și manipulare cu `try/catch`.</p>
+    </div>
+
+    <div id="employee-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    </div>
+  </div>
+
+  <script type="module">
+    import { employees } from './employees.js';
+
+    const list = document.getElementById('employee-list');
+
+    try {
+      employees.forEach(emp => {
+        const card = document.createElement('div');
+        card.className = "p-4 border border-gray-100 bg-gray-50 rounded-xl flex justify-between items-center shadow-sm";
+        card.innerHTML = `
+          <div>
+            <h4 class="font-bold text-gray-800">${emp.name}</h4>
+            <p class="text-xs text-gray-500">${emp.position || 'Nespecificat'} • <span class="text-purple-600 font-medium">${emp.department}</span></p>
+          </div>
+          <span class="text-sm font-semibold text-gray-700 bg-white px-3 py-1 rounded-lg border border-gray-200">
+            ${emp.salary} LEI
+          </span>
+        `;
+        list.appendChild(card);
+      });
+    } catch (err) {
+      list.innerHTML = `<p class="text-red-500 text-sm col-span-2">Eroare la încărcarea datelor: ${err.message}</p>`;
+    }
+  </script>
+</body>
+</html>
